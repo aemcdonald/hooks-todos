@@ -12,6 +12,8 @@ export default function TodoForm() {
   useEffect(() => {
     if (currentTodo.text) {
       setTodo(currentTodo.text);
+    } else {
+      setTodo('');
     }
   }, [currentTodo.id]);
 
@@ -24,7 +26,7 @@ export default function TodoForm() {
     }
     setTodo('');
   };
-  
+
   return (
     <form onSubmit={handleSubmit}>
       <input
