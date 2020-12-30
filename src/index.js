@@ -1,10 +1,8 @@
-import React from 'react';
+import React, { useContext, useReducer } from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 
-const App = () => {
-  
-}
+const App = () => {};
 
 ReactDOM.render(
   <React.StrictMode>
