@@ -6,6 +6,7 @@ export default function TodoForm() {
         <form>
             <input
                 type='text'
+                onChange={event => setTodo(event.target.value)}
             />
         </form>
     )
