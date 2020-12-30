@@ -4,7 +4,9 @@ import reportWebVitals from './reportWebVitals';
 import TodosContext from './context';
 import reducer from './reducer';
 
-const App = () => {};
+const App = () => {
+  const initialState = useContext(TodosContext)
+};
 
 ReactDOM.render(
   <React.StrictMode>
