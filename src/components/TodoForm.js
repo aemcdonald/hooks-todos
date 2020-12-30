@@ -6,6 +6,12 @@ export default function TodoForm() {
 
     const { state: { currentTodo = {} }, dispatch } = useContext(TodosContext)
 
+    useEffect(() => {
+        if(currentTodo.text) {
+            setTodo(currentTodo.text)
+        }
+    }, [currentTodo.id])
+
     const handleSubmit = event => {
         event.preventDefault()
         dispatch({ type: 'ADD_TODO', payload: todo })
