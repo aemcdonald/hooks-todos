@@ -4,15 +4,15 @@ import TodosContext from '../context';
 export const TodoList = () => {
   const { state, dispatch } = useContext(TodosContext);
 
-  return(
-      <div>
-          <ul>
-              {state.todos.map(todo => (
-                  <li key={todo.id}>
-                      <span>{todo.text}</span>
-                  </li>
-              ))}
-          </ul>
-      </div>
-  )
+  return (
+    <div>
+      <ul>
+        {state.todos.map(todo => (
+          <li key={todo.id}>
+            <span>{todo.text}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 };
