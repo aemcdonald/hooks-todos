@@ -19,7 +19,7 @@ export const TodoList = () => {
               Complete
             </button>
             <button>Edit</button>
-            <button>Delete</button>
+            <button onClick={() => dispatch({ type: 'REMOVE_TODO', payload: todo })}>Delete</button>
           </li>
         ))}
       </ul>
