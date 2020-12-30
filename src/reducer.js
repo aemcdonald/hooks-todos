@@ -10,6 +10,14 @@ function reducer(state, action) {
         ...state,
         todos: toggledTodos
       };
+    case 'REMOVE_TODO':
+      const filteredTodos = state.todos.filter(
+        todo => todo.id !== action.payload.id
+      );
+      return {
+        ...state,
+        todos: filteredTodos
+      };
     default:
       return state;
   }
