@@ -1,6 +1,8 @@
 import React, { useContext, useReducer } from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
+import TodosContext from './context';
+import reducer from './reducer';
 
 const App = () => {};
 
