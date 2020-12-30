@@ -3,16 +3,17 @@ import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import TodosContext from './context';
 import reducer from './reducer';
+import TodoList from './components/TodoList';
 
 const App = () => {
-  const initialState = useContext(TodosContext)
-  const [state, dispatch] = useReducer(reducer, initialState)
+  const initialState = useContext(TodosContext);
+  const [state, dispatch] = useReducer(reducer, initialState);
 
-  return(
+  return (
     <TodosContext.Provider value={{ state, dispatch }}>
-
+      <TodoList />
     </TodosContext.Provider>
-  )
+  );
 };
 
 ReactDOM.render(
