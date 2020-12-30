@@ -4,7 +4,7 @@ import TodosContext from '../context'
 export default function TodoForm() {
     const [todo, setTodo] = useState('')  
 
-    const { state, dispatch } = useContext(TodosContext)
+    const { state: { currentTodo = {} }, dispatch } = useContext(TodosContext)
 
     const handleSubmit = event => {
         event.preventDefault()
