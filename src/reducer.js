@@ -3,6 +3,9 @@ import { v4 as uuidv4 } from 'uuid';
 function reducer(state, action) {
   switch (action.type) {
     case 'ADD_TODO':
+      if (!action.payload) {
+        return state;
+      }
       const newTodo = {
         id: uuidv4(),
         text: action.payload,
