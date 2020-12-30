@@ -7,11 +7,11 @@ export const TodoList = () => {
   return(
       <div>
           <ul>
-              {state.todos.map(todo => {
+              {state.todos.map(todo => (
                   <li key={todo.id}>
                       <span>{todo.text}</span>
                   </li>
-              })}
+              ))}
           </ul>
       </div>
   )
