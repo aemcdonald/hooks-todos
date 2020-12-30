@@ -6,6 +6,9 @@ function reducer(state, action) {
       if (!action.payload) {
         return state;
       }
+      if (state.todos.findIndex(todo => todo.text === action.payload) > -1) {
+          return state;
+      }
       const newTodo = {
         id: uuidv4(),
         text: action.payload,
