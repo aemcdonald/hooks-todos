@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import TodosContext from './context';
 import reducer from './reducer';
-import TodoList from './components/TodoList';
+import { TodoList } from './components/TodoList';
 
 const App = () => {
   const initialState = useContext(TodosContext);
