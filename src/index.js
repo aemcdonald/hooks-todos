@@ -7,6 +7,12 @@ import reducer from './reducer';
 const App = () => {
   const initialState = useContext(TodosContext)
   const [state, dispatch] = useReducer(reducer, initialState)
+
+  return(
+    <TodosContext.Provider value={{ state, dispatch }}>
+
+    </TodosContext.Provider>
+  )
 };
 
 ReactDOM.render(
