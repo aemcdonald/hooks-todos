@@ -3,7 +3,7 @@ function reducer(state, action) {
     case 'TOGGLE_TODO':
       const toggledTodos = state.todos.map(todo =>
         todo.id === action.payload.id
-          ? { ...action.payload, coplete: !action.payload.complete }
+          ? { ...action.payload, complete: !action.payload.complete }
           : todo
       );
       return {
