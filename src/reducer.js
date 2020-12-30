@@ -7,7 +7,7 @@ function reducer(state, action) {
         return state;
       }
       if (state.todos.findIndex(todo => todo.text === action.payload) > -1) {
-          return state;
+        return state;
       }
       const newTodo = {
         id: uuidv4(),
@@ -35,6 +35,12 @@ function reducer(state, action) {
         todos: toggledTodos
       };
     case 'UPDATE_TODO':
+      if (!action.payload) {
+        return state;
+      }
+      if (state.todos.findIndex(todo => todo.text === action.payload) > -1) {
+        return state;
+      }
       const updatedTodo = { ...state.currentTodo, text: action.payload };
       const updatedTodoIndex = state.todos.findIndex(
         todo => todo.id === state.currentTodo.id
